@@ -48,7 +48,7 @@ class SoftwaresController < ApplicationController
   private
   def software_params
       #don't include :platform_ids here because we need to convert it into a string
-    params.require(:software).permit(:name, :versions, :url)
+    params.require(:software).permit(:name, :version, :url)
   end
 
 end
