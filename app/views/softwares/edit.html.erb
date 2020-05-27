@@ -1,0 +1,7 @@
+<%= form_for @software do |f| %>
+  ...
+  <%= f.label :supported_platform %><br/>
+  <%= f.collection_check_boxes(:platform_ids, @platforms, :id, :platform_name, { checked: @platform_ids_array.map(&:to_param) }) %>
+  ...
+  <%= f.submit "Save", class: 'btn btn-success' %>
+<% end %>
