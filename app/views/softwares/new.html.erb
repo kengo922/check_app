@@ -1,7 +1,11 @@
 <%= form_for @software do |f| %>
-  ...
   <%= f.label :supported_platform %><br/>
-  <%= f.collection_check_boxes(:platform_ids, @platforms, :id, :platform_name) %>
-  ...
+  <%= f.collection_check_boxes(:platform_ids, @platforms, :id, :platform_name) %><br/>
+  <%= f.label :name %><br/>
+  <%= f.text_field :name, placeholder: :名前, class: :form__title %><br/>
+  <%= f.label :version %><br/>
+  <%= f.text_area :version, placeholder: :バージョン, class: :form__title %><br/>
+  <%= f.label :url %><br/>
+  <%= f.text_area :url, placeholder: :url, class: :form__text %><br/>
   <%= f.submit "Save", class: 'btn btn-success' %>
 <% end %>

@@ -5,7 +5,6 @@ class CreateSoftwares < ActiveRecord::Migration[5.2]
       t.string :version
       t.text :platform_ids
       t.text :url
-
       t.timestamps
     end
   end

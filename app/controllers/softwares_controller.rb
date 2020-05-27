@@ -1,5 +1,9 @@
 class SoftwaresController < ApplicationController
   
+  def index
+    @software = Software.all
+  end
+
   def new
     @software = Software.new
     @platforms = Platform.all
